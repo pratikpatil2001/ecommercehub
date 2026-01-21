@@ -1,0 +1,34 @@
+import express from 'express';
+import Product from '../models/productModel.js';
+
+const router = express.Router();
+
+// @desc    Fetch all products
+// @route   GET /api/products
+router.get('/', async (req, res) => {
+  try {
+    const products = await Product.find({});
+    console.log('Backend: Products fetched successfully'.green.bold);
+    res.json(products);
+  } catch (error) {
+    console.error(`Error: ${error.message}`.red.bold);
+    res.status(500).json({ message: 'Server Error' });
+  }
+});
+
+// @desc    Fetch single product
+// @route   GET /api/products/:id
+router.get('/:id', async (req, res) => {
+  try {
+    const product = await Product.findById(req.params.id);
+    if (product) {
+      res.json(product);
+    } else {
+      res.status(404).json({ message: 'Product not found' });
+    }
+  } catch (error) {
+    res.status(500).json({ message: 'Server Error' });
+  }
+});
+
+export default router;

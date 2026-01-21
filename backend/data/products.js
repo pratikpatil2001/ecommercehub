@@ -1,8 +1,7 @@
-// backend/data/products.js
 const products = [
   {
     name: 'Airpods Wireless Bluetooth Headphones',
-    image: '/images/airpods.jpg',
+    image: 'images/airpods.jpg',
     description: 'Bluetooth technology lets you connect it with compatible devices wirelessly',
     brand: 'Apple',
     category: 'Electronics',
@@ -13,7 +12,7 @@ const products = [
   },
   {
     name: 'iPhone 13 Pro 256GB Memory',
-    image: '/images/phone.jpg',
+    image: 'images/iphone.jpg',
     description: 'Introducing the iPhone 13 Pro. A transformative triple-camera system.',
     brand: 'Apple',
     category: 'Electronics',
@@ -24,7 +23,7 @@ const products = [
   },
   {
     name: 'Sony Playstation 5',
-    image: '/images/playstation.jpg',
+    image: 'images/ps5.jpg',
     description: 'The ultimate home entertainment center starts with PlayStation.',
     brand: 'Sony',
     category: 'Electronics',
